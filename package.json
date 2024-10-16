@@ -1,0 +1,73 @@
+{
+  "name": "elonswap-core-sdk",
+  "license": "MIT",
+  "version": "1.0.5",
+  "description": "SDK for building applications on top of Uniswap in DogeChain Network.",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElonSwap-org/elonswap.git"
+  },
+  "keywords": [
+    "uniswap",
+    "ethereum",
+    "elonswap-core-sdk"
+  ],
+  "module": "dist/sdk.esm.js",
+  "scripts": {
+    "lint": "tsdx lint src test",
+    "build": "tsdx build",
+    "start": "tsdx watch",
+    "test": "tsdx test",
+    "prepublishOnly": "tsdx build",
+    "cp-to-interface": "mkdir ../uniswap-interface/node_modules/elonswap-core-sdk && cp -r ./dist ../uniswap-interface/node_modules/elonswap-core-sdk && cp -rf ./package.json ../uniswap-interface/node_modules/elonswap-core-sdk"
+  },
+  "dependencies": {
+    "@uniswap/v2-core": "^1.0.0",
+    "big.js": "^5.2.2",
+    "decimal.js-light": "^2.5.0",
+    "jsbi": "^3.1.1",
+    "tiny-invariant": "^1.1.0",
+    "tiny-warning": "^1.0.3",
+    "toformat": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@ethersproject/address": "^5.0.0-beta",
+    "@ethersproject/contracts": "^5.0.0-beta",
+    "@ethersproject/networks": "^5.0.0-beta",
+    "@ethersproject/providers": "^5.0.0-beta",
+    "@ethersproject/solidity": "^5.0.0-beta"
+  },
+  "devDependencies": {
+    "@ethersproject/address": "^5.6.1",
+    "@ethersproject/contracts": "^5.6.2",
+    "@ethersproject/networks": "^5.6.4",
+    "@ethersproject/providers": "^5.6.8",
+    "@ethersproject/solidity": "^5.6.1",
+    "@types/big.js": "^4.0.5",
+    "@types/jest": "^24.0.25",
+    "babel-plugin-transform-jsbi-to-bigint": "^1.3.1",
+    "npmignore": "^0.3.0",
+    "tsdx": "^0.14.1"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true
+  },
+  "bugs": {
+    "url": "https://github.com/ElonSwap-org/elonswap//issues"
+  },
+  "homepage": "https://github.com/ElonSwap-org/elonswap/#readme",
+  "directories": {
+    "test": "test"
+  },
+  "author": "endless-dev"
+}
